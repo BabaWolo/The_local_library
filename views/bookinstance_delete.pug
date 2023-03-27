@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+
+    h1 #{title} 
+    p Summary: 
+    |#{bookinstance.book.summary}
+    p Genre: #{bookinstance.book.genre.name} 
+    p Due Back: #{bookinstance.due_back_formatted}
+    p Status: #{bookinstance.status}
+
+    hr
+    p Do you really want to delete this Genre?
+    
+    form(method='POST' action='')
+      div.form-group
+        input#id.form-control(type='hidden',name='id', required='true', value=bookinstance._id )
+
+      button.btn.btn-primary(type='submit') Delete
