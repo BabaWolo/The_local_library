@@ -16,7 +16,7 @@ BookSchema.virtual("url").get(function () {
   return `/catalog/book/${this._id}`;
 });
 
-
+const BookModel = mongoose.model("Book", BookSchema);
 
 // Export model
-module.exports = mongoose.model("Book", BookSchema);
+module.exports = BookModel;

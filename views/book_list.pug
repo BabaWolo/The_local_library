@@ -5,9 +5,11 @@ block content
 
   ul
     each book in book_list
-      li
+      li#list-item
         a(href=book.url) #{book.title}
         |  (#{book.author.name})
 
     else
       li There are no books.
+  
+  include searchBar.pug

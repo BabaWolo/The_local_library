@@ -5,7 +5,7 @@ block content
 
   ul
     each author in author_list
-      li
+      li#list-item
         a(href=author.url) #{author.name}
         if (author.lifespan)
             |  (#{author.lifespan})
@@ -14,3 +14,5 @@ block content
 
     else
       li There are no authors.
+  
+  include searchBar.pug

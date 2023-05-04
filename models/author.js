@@ -38,5 +38,7 @@ AuthorSchema.virtual("lifespan").get(function () {
   }
 });
 
+AuthorModel = mongoose.model("Author", AuthorSchema);
+
 // Export model
-module.exports = mongoose.model("Author", AuthorSchema);
+module.exports = AuthorModel;

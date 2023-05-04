@@ -5,7 +5,7 @@ block content
 
   ul
     each val in bookinstance_list
-      li
+      li#list-item
         a(href=val.url) #{val.book.title} : #{val.imprint} -
         if val.status=='Available'
           span.text-success #{val.status}
@@ -18,3 +18,5 @@ block content
 
     else
       li There are no book copies in this library.
+
+  include searchBar.pug
